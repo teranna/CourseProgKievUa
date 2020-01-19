@@ -16,8 +16,8 @@ public class main {
 			double b = d.nextDouble();
 			double c = d.nextDouble();
 			double p= ((a+b+c)/2);
-			double sqre = Math.sqrt((p*(p-a)*(p-b)*(p-c)));
-			System.out.println(sqre);
+			double square = Math.sqrt((p*(p-a)*(p-b)*(p-c)));
+			System.out.println(square);
  
 		}
 }
