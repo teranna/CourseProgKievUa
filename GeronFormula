@@ -1,0 +1,23 @@
+/*
+Написать программу которая вычислит и выведет на экран
+площадь треугольника если известны его стороны.
+
+*/
+
+import java.util.Scanner;
+
+public class main {
+		public static void main(String[] args) {
+			
+			Scanner d =new Scanner(System.in);
+			System.out.println("Print the number");
+
+			double a = d.nextDouble();
+			double b = d.nextDouble();
+			double c = d.nextDouble();
+			double p= ((a+b+c)/2);
+			double sqre = Math.sqrt((p*(p-a)*(p-b)*(p-c)));
+			System.out.println(sqre);
+ 
+		}
+}
