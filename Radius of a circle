@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class main2 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Input circle radius and press Enter");
+		
+		double radius;
+		radius =sc.nextDouble();
+		
+		double s =Math.PI*(Math.pow(radius, 2));
+		System.out.println(s);
+	}
+
+}
