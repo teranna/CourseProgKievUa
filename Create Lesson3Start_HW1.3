@@ -1,0 +1,28 @@
+  /*Треугольник существует только тогда, когда сумма любых 
+  двух его сторон больше третьей. Дано: a, b, c – стороны 
+  предполагаемого треугольника. Напишите программу которая 
+  укажет существует такой треугольник или нет.
+  */
+public class main {
+
+	public static void main (String[] args) {
+		
+		
+		int a=4;
+		int b=5;
+		int c=3;
+
+		
+		if ((a+b)<c) {
+			System.out.println("triangle does not exist");
+		}  else if ((a+c)<b) {
+			System.out.println("triangle does not exist");
+		}  else if ((c+b)<a) {
+			System.out.println("triangle does not exist");
+		}  else if ((a+b)<c) {
+				System.out.println("triangle does not  exist");
+		} else{
+			System.out.println("triangle exist");
+		}
+	}
+}
