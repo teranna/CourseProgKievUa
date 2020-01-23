@@ -1,0 +1,62 @@
+/* Есть девятиэтажный дом, в котором 4 подъезда. 
+Номер подъезда начинается с единицы. 
+На одном этаже 4 квартиры. Напишите программу которая 
+олучит номер квартиры с клавиатуры, и выведет на экран 
+на каком этаже, какого подъезда расположенна эта квартира. 
+Если такой квартиры нет в этом доме то нужно сообщить об 
+этом пользователю. 
+*/
+import java.util.Scanner;
+
+public class main {
+
+	public static void main (String[] args) {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Please print the number of flat");
+		
+		int flatNumber = sc.nextInt();
+		int floor;
+		
+		if (0<flatNumber && flatNumber<37) {
+			floor=(flatNumber)/4+1;
+			System.out.println(floor +" floor and 1st entrance");
+		} else if  (36<flatNumber && flatNumber<73) {
+			floor=(flatNumber-36)/4+1;
+			System.out.println(floor +" floor and 2nd entrance");
+		} else if  (72<flatNumber && flatNumber<109) {
+			floor=(flatNumber-72)/4+1;
+			System.out.println(floor +" floor and 3rd entrance");
+		} else if  (108<flatNumber && flatNumber<145) {
+			floor=(flatNumber-108)/4+1;
+			System.out.println(floor +" floor and 4th entrance");
+		} else {
+			System.out.println("This flat isnot in this house");
+		}
+	}
+}  
+import java.util.Scanner;
+
+public class main {
+
+	public static void main (String[] args) {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Please print the number of flat");
+		
+		int flatNumber = sc.nextInt();
+		int floor;
+		int entrance;
+		
+		if (flatNumber%36==0) {
+			entrance=(flatNumber/36);
+			floor= 9;
+			System.out.println(floor +" floor and " + entrance+ "entrance");
+		} if (flatNumber%4==0) {
+			entrance=((flatNumber-flatNumber%36)/36);
+			floor=((flatNumber/4)-(flatNumber%36/36)*9);
+			System.out.println(floor +" floor and" + entrance+ "entrance");
+				} else {
+			floor=(flatNumber-72)/4+1;
+			System.out.println(floor +" floor and 3rd entrance");
+		
+	}
+}
