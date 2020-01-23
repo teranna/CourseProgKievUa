@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class main {
+
+	public static void main (String[] args) {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Please print the number of flat");
+		
+		int flatNumber = sc.nextInt();
+		int floor;
+		int entrance;
+		
+		if (flatNumber>144) {
+			System.out.println("This flat isnot in this house");
+		}
+		if (flatNumber%36==0) {
+			entrance=(flatNumber/36);
+			floor= 9;
+			System.out.println(floor +" floor and " + entrance+ "entrance");
+		} 
+				if (flatNumber%4==0) {
+			entrance=(((flatNumber-flatNumber%36)/36)+1);
+			floor=((flatNumber/4)-(flatNumber-flatNumber%36/36)*9);
+			System.out.println(floor +" floor and" + entrance+ "entrance");
+		} else  {
+					floor=((flatNumber-flatNumber%4)/4)-((flatNumber-flatNumber%36)/36)*9+1;
+					System.out.println(floor +" floor and 3rd entrance");
+				}	
+	}
+}
