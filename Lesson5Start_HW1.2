@@ -1,0 +1,25 @@
+import java.util.Arrays;
+import java.util.Scanner;
+//Написать код для возможности создания массива целых чисел (размер вводиться с клавиатуры) 
+//и возможности заполнения каждого его элемента вручную. 
+//Выведите этот массив на экран.
+
+public class Main {
+	
+	public static void main(String[] args) 
+	{ 
+		int[] mass; 
+		int n;
+		Scanner sc =new Scanner(System.in);
+		
+		System.out.println("Enter the number of array");
+		n =sc.nextInt();
+		
+		mass= new int [n];
+		for (int i=0; i<n; i++) {
+			System.out.println("Enter a" +i);
+			mass[i] =sc.nextInt();
+		}
+			System.out.println(Arrays.toString(mass)); 
+	}
+}
