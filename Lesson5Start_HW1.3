@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+//Введите строку текста с клавиатуры — реализуйте программу для 
+//возможности подсчета количества символа — 
+//'b' в этой строке, с выводом результат на экран. 
+import java.util.Arrays;
+public class Main {
+	
+	public static void main(String[] args) 
+	{ 
+
+		int m=0;
+
+		Scanner sc= new Scanner (System.in);
+		
+		System.out.println("Enter the text");
+		String text = sc.nextLine();
+		char[] n =text.toCharArray();
+
+		for (int i=0; i<n.length; i++) {
+			if (n[i] == 'b') {
+				m++;
+			} 
+			
+		 
+}  System.out.println(m);
+}
+}
