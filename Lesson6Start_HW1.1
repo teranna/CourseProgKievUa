@@ -1,1 +1,24 @@
+  
+public class Main {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+				
+		int[] array=new int[] {1, 2, 5, 10, 6,7};
 
+		System.out.println(MaxArray(array));
+		System.out.println(array);
+	}
+	
+	public static int MaxArray(int array[]) {
+		int MaxArray =array[0];
+		for (int i = 0; i < array.length; i++) {
+			if (MaxArray<array[i]) {
+				MaxArray=array[i];
+			}
+		
+		}
+		return MaxArray;
+	}
+
+}
