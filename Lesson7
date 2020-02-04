@@ -1,0 +1,36 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Date date1=new Date();
+	
+		SimpleDateFormat sdf1= new SimpleDateFormat("dd MMMM YYYY ");
+		SimpleDateFormat sdf2= new SimpleDateFormat("dd/MM/YYYY ");	
+		
+		String day="11/10/1981";
+		
+		Date data2=new Date();
+				
+		try {
+			date1= sdf2.parse(day);
+		} catch (ParseException e) {
+			System.out.println("Wrong input");
+		}
+		
+		Date data3=new Date();
+		
+		String text=sdf1.format(date1);
+		System.out.println(text);
+		
+		text=sdf2.format(date1);		
+		System.out.println(text);
+		
+		long t=date1.getTime();
+		System.out.println(t);
+	}
+
+}
