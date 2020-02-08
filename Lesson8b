@@ -1,0 +1,36 @@
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] coffe=new String[] {"Americano", "Espresso", "Latte", "Capuchino", "Mocachino"};
+		
+		int [] prices=new int[] {20,24,27,25,27};
+		
+		int [] n= new int[] {500, 430, 470, 510,370};
+		String del=";";
+		Date date=new Date();
+		SimpleDateFormat sdf= new SimpleDateFormat("(dd MM yyyy");
+		
+		File file =new File("report"+sdf.format(date)+".csv");
+		saveReport(file, del, coffe, prices, n);
+		System.out.println("Done");
+	}
+
+	public static void saveReport(File file, String del, String[] coffe, int[] prices, int[] n) {
+		try (PrintWriter pw=new PrintWriter(file)) {
+			for (int i = 0; i < coffe.length; i++) {
+				pw.println(coffe[i]+del+prices[i]+del+n[i]);
+			}
+		} catch (IOException e) {
+			// TODO: handle exception
+		}
+	
+	}
+}
+
