@@ -1,0 +1,18 @@
+import java.io.File;
+
+
+public class Main {
+	public static void main(String[] args) {
+		
+		File workFolder= new File("C:\\Users\\User\\eclipse-workspace\\Lesson8_files");
+		nameFolders(workFolder);
+	}
+		
+		public static void nameFolders(File workFolder) {
+			
+		File[] files = workFolder.listFiles();
+		for (int i = 0; i < files.length; i++) {
+			System.out.println(files[i]);
+				}
+			}
+}
