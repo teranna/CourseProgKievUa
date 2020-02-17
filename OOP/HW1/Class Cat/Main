@@ -1,0 +1,25 @@
+package moc.liamg.ayna;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Cat cat1= new Cat();
+		cat1.name="Kitsy-Lu";
+		cat1.weight=15;
+		cat1.yearOfBorn=2018;
+		
+		Cat cat2= new Cat();
+		cat2.name="Kuzya";
+		cat2.weight=8.2;
+		cat2.yearOfBorn=2010;
+		
+		cat1.print();
+		System.out.println();
+		
+		cat2.print();
+		System.out.println();
+
+	}
+
+}
