@@ -1,0 +1,33 @@
+package moc.liamg.ayna;
+
+	public	class Cat {
+		String name;
+		double weight;
+		int yearOfBorn;
+
+
+		public void meow() {
+			System.out.println("Meow-meow");
+		}
+
+		public Cat(String name, double weight, int yearOfBorn) {
+			super();
+			this.name = name;
+			this.weight = weight;
+			this.yearOfBorn = yearOfBorn;
+		}
+
+		
+		public Cat() {
+			super();
+		}
+
+
+
+		public void print() {
+			System.out.println("Name: " + name);
+			System.out.println("Weight: " + weight);
+			System.out.println("Year cat born in: " + yearOfBorn);
+
+		}
+	}
