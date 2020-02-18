@@ -1,0 +1,23 @@
+import javax.swing.JOptionPane;
+
+		public class Main {
+		public static void main(String[] args) {
+			double a;
+			NullPointerException error=new NullPointerException ("HELLO");
+			for(;;){
+				
+				try{
+	a=Double.valueOf(JOptionPane.showInputDialog("Input double number"));
+	break;
+				} catch(NumberFormatException e){
+
+					JOptionPane.showMessageDialog(null,"Error number format");
+					throw error;
+				} catch(NullPointerException e){
+					a=0;
+					JOptionPane.showMessageDialog(null,"Cancel");
+					break;
+				}
+			}System.out.println(a);
+		}
+}
