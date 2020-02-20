@@ -1,0 +1,27 @@
+	import java.util.Comparator;
+
+	public class CatAgeComparator implements Comparator {
+
+		@Override
+		public int compare (Object o1, Object o2) {
+			if (o1 !=null && o2==null ) {
+				return 1;
+			}
+			if (o1==null && o2 !=null) {
+				return -1;
+			}
+		Cat a=(Cat) o1;
+		Cat b=(Cat) o2;
+
+		if (a.getName().compareTo(b.getName())>0) {
+			
+			return 1;
+		}
+		
+		if (a.getName().compareTo(b.getName())<0) {
+			
+			return -1;
+		}
+		return 0;
+				}
+		}
