@@ -1,0 +1,32 @@
+import java.util.Arrays;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Cat cat1=new Cat("Bob", 6);
+		Cat cat2=new Cat("Umka", 5);
+		Cat cat3=new Cat("Liska", 4);
+		Cat cat4=new Cat("Kuzia", 3);
+		
+		Cat [] cats=new Cat[] {cat1, cat2, cat3,cat4};
+		
+		for (Cat cat:cats) {
+			System.out.println(cat);
+		}
+		System.out.println( );
+		
+		Arrays.sort(cats, new CatNameComporator());
+		
+		for (Cat cat : cats) {
+			System.out.println(cat);
+		}
+		System.out.println( );
+		Arrays.sort(cats, new CatAgeComparator());
+		
+		for (Cat cat : cats) {
+			System.out.println(cat);
+	}
+
+}
+}
