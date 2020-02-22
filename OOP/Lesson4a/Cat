@@ -8,6 +8,7 @@ public class Cat {
 		this.age = age;
 	}
 
+
 //	public Cat() {
 //
 //	}
