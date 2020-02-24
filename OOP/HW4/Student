@@ -1,0 +1,39 @@
+
+public class Student extends People{
+	
+	private String group;
+	private int marks;
+	
+	public Student (String name, String lastname, int age, String sex, String group, int marks) {
+		super(name, lastname,age, sex );
+		this.group=group;
+		this.marks=marks;
+		}
+	
+	public Student () {
+		super ();
+	}
+
+	public String getGroup() {
+		return group;
+	}
+
+	public void setGroup(String group) {
+		this.group = group;
+	}
+
+	public int getMarks() {
+		return marks;
+	}
+
+	public void setMarks(int marks) {
+		this.marks = marks;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [group=" + group + ", marks=" + marks + "]";
+	}
+	
+
+}
