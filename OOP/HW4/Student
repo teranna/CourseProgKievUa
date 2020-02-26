@@ -1,61 +1,34 @@
 
-public class People {
+public class Student extends People{
+	
+	private String group;
 
-	private String name;
-	private String lastname;
-	private int age;
-	private Sex sex;
-
-	public People(String name, String lastname, int age, String sex) {
-		super();
-		this.lastname = lastname;
-		this.name = name;
-		this.age = age;
-
-	}
-
-	public People () {
+	
+	public Student (String name, String lastname, int age, String sex, String group) {
+		super(name, lastname,age, sex );
 		
-	}
+		this.group=group;
 		
-	public String getName() {
-		return name;
+		}
+	
+	public Student () {
+		super ();
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public String getGroup() {
+		return group;
 	}
 
-	public String getLastname() {
-		return lastname;
+	public void setGroup(String group) {
+		this.group = group;
 	}
 
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public Sex getSex() {
-		return sex;
-	}
-
-	public void setSex(Sex sex) {
-		this.sex = sex;
-	}
+	
 
 	@Override
 	public String toString() {
-		return "People [name=" + name + ", lastname=" + lastname + ", age=" + age + ", sex=" + sex + "]";
+		return "Student [group=" + group + "]";
 	}
+	
 
-	
-	
-	
 }
