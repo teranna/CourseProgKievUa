@@ -1,0 +1,17 @@
+
+import java.util.Comparator;
+
+	public class Group {
+		private Student [] studentArray=new Student[10];
+		private String groupName;
+		
+		
+		public Group () {
+			super();
+			this.groupName="???";
+		}
+		
+		public Group
+		
+		
+}
