@@ -4,30 +4,10 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Student st1=new Student ("Anna", "Ter", 25, "FEMALE", "EE101");
 		
-		Student cat1=new Student("Bob", "Bobenko", 25, male, String group, int marks);
-		Student cat2=new Student("Umka", 5);
-		Student cat3=new Student("Liska", 4);
-		Cat cat4=new Cat("Kuzia", 3);
-		
-		Cat [] cats=new Cat[] {cat1, cat2, cat3,cat4};
-		
-		for (Cat cat:cats) {
-			System.out.println(cat);
-		}
-		System.out.println( );
-		
-		Arrays.sort(cats, new CatNameComporator());
-		
-		for (Cat cat : cats) {
-			System.out.println(cat);
-		}
-		System.out.println( );
-		Arrays.sort(cats, new CatAgeComparator());
-		
-		for (Cat cat : cats) {
-			System.out.println(cat);
-		
+		System.out.println(st1);
+		System.out.println(" ");
 	}
 
 }
