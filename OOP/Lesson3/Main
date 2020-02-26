@@ -1,23 +1,40 @@
+package com.gmail.tsa;
+
 import javax.swing.JOptionPane;
 
-		public class Main {
-		public static void main(String[] args) {
-			double a;
-			NullPointerException error=new NullPointerException ("HELLO");
-			for(;;){
-				
-				try{
-	a=Double.valueOf(JOptionPane.showInputDialog("Input double number"));
-	break;
-				} catch(NumberFormatException e){
+import com.gmail.tsa.exceptions.NegativeValueException;
 
-					JOptionPane.showMessageDialog(null,"Error number format");
-					throw error;
-				} catch(NullPointerException e){
-					a=0;
-					JOptionPane.showMessageDialog(null,"Cancel");
-					break;
+public class Main {
+
+	public static void main(String[] args) {
+		double a;
+
+		NullPointerException error = new NullPointerException("Hello world");
+
+		for (;;) {
+			try {
+				a = Double.valueOf(JOptionPane.showInputDialog("Input double number"));
+				if (a < 0) {
+					NegativeValueException nve;
+					nve = new NegativeValueException("Negative value");
+					nve.setValue(a);
+					throw nve;
 				}
-			}System.out.println(a);
+
+				break;
+			} catch (NumberFormatException e) {
+				JOptionPane.showMessageDialog(null, "Error number format");
+
+			} catch (NullPointerException e) {
+				a = 0;
+				JOptionPane.showMessageDialog(null, "Cancel");
+				break;
+			} catch (NegativeValueException e) {
+				JOptionPane.showMessageDialog(null, "Negative value " + e.getValue());
+
+			}
 		}
+
+		System.out.println(a);
+	}
 }
