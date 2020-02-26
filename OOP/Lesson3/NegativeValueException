@@ -1,0 +1,25 @@
+package com.gmail.tsa.exceptions;
+
+public class NegativeValueException extends Exception {
+
+	private double value;
+
+	public NegativeValueException() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public NegativeValueException(String message) {
+		super(message);
+		// TODO Auto-generated constructor stub
+	}
+
+	public double getValue() {
+		return value;
+	}
+
+	public void setValue(double value) {
+		this.value = value;
+	}
+
+}
