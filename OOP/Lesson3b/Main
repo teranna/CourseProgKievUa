@@ -1,0 +1,32 @@
+package com.gmail.tsa;
+
+import java.util.Arrays;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] array = new int[] { 1, 2, 3, 4, 5 };
+		System.out.println(Arrays.toString(array));
+		try {
+			swap(array, 0, 12);
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println(":)");
+		}
+		System.out.println(Arrays.toString(array));
+
+	}
+
+	public static int getElementByIndex(int[] array, int i) {
+		int temp = array[i];
+		return temp;
+	}
+
+	public static void swap(int[] array, int i, int j) {
+		int temp = getElementByIndex(array, i);
+		array[i] = getElementByIndex(array, j);
+		array[j] = temp;
+	}
+
+}
