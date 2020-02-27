@@ -1,0 +1,30 @@
+import java.math.BigInteger;
+
+
+public class FactorialTask implements Runnable {
+	private int number;
+
+	public FactorialTask(int number) {
+		super();
+		this.number = number;
+	}
+
+	public BigInteger fact(int n) {
+		BigInteger f=new BigInteger("1");
+		for (int i=1; i<=n; i++) {
+			f=f.multiply(new BigInteger(Integer.toString(i)));
+			
+		}
+		return f;
+	}
+	
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+}
