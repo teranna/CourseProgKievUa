@@ -1,0 +1,25 @@
+import java.util.Arrays;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ball ball1=new Ball(20, "pink", 20);
+		Ball ball2=new Ball(7, "blue", 200);
+		Ball ball3=new Ball(34, "Orange", 60);
+		Ball ball5=new Ball(35, "red", 50);
+		Ball ball4=new Ball(26, "Black", 100);
+		
+		Ball[] balls=new Ball[] {ball1, ball2, ball3, ball4, ball5};
+		for (Ball ball:balls) {
+			System.out.println(ball);
+		}
+				System.out.println();
+				
+				Arrays.sort(balls, new BallSizeComparator());
+				
+				for (Ball ball:balls) {
+				System.out.println(ball);
+	}
+	}
+}
