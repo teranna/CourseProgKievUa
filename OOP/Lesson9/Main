@@ -1,0 +1,46 @@
+import java.util.Comparator;
+import java.util.Iterator;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Container <Integer>a=new Container<>(100);
+		
+		//a.setElement("100");
+		
+		int sum=20+(Integer)a.getElement();
+		
+		System.out.println("sum = "+sum);
+		
+		Container <String> b=new Container <String>("Hello world");
+		
+		System.out.println(a);
+		System.out.println(b);
+		
+		Integer[] arr1 = new Integer[] {4, 7, -2, 5};
+		Integer max1= getMax(arr1);
+		System.out.println(max1);
+		
+		String [] arr2=new String [] {"ab", "ba", "aa", "bb"};
+		
+		String max2=getMax(arr2);
+		
+		System.out.println(max2);
+		
+		Container<? extends Comparable<?>> c=b;
+	}
+	
+	public static <T extends Comparable<T>> T getMax(T[] array) {
+		T max=array[0];
+		for (T element : array) {
+			if (max.compareTo(element)<0) {
+				max=element;
+			
+		}
+			
+		}
+		return max;
+	}
+
+}
