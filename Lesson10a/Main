@@ -1,0 +1,26 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Map<Integer, String> map=new HashMap<>();
+		map.put(1,  "one");
+		map.put(2,  "two");
+		map.put(10,  "ten");
+		
+		System.out.println(map);
+		
+		String temp=map.get(1);
+		System.out.println(temp);
+		
+		Set<Integer>keys = map.keySet();
+		
+		for (Integer key :keys) {
+			System.out.println(key+ " "+map.get(key));
+		}
+	}
+
+}
